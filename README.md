@@ -340,6 +340,7 @@ Dictionary: message
 #### Post Value:
 #### Return Value:
 一个group uid array
+
 ----
 
 ###   2. usersUidArrayWithGroupUid
@@ -349,6 +350,7 @@ Dictionary: message
 
 #### Return Value:
 一个user uid array
+
 ----
 
 ## Friend:
@@ -357,6 +359,7 @@ Dictionary: message
 #### Post Value:    
 #### Return Value:
 一个user uid array
+
 ----
 
 ## Page:
@@ -365,6 +368,7 @@ Dictionary: message
 #### Post Value:
 #### Return Value:
 一个page uid array
+
 ----
 
 ## Issue:
@@ -373,6 +377,7 @@ Dictionary: message
 #### Post Value:
 #### Return Value:
 一个issue array
+
 ----
 
 ## Tag:
@@ -382,6 +387,7 @@ Dictionary: message
     $pageUid = $_POST["pageUid"];
 #### Return Value:
 一个tag uid array
+
 ----
 
 ###   2. getPageUidArrayWithTagUid
@@ -390,7 +396,49 @@ Dictionary: message
      $tagUid = $_POST["tagUid"];
 #### Return Value:
 一个page uid array
+
 ----
 
+## Like:
+
+### likePage
+#### URL: likePage
+#### Post Value:
+    $pageUid = $_POST["pageUid"];
+#### Return Value:
+    $result = array("message" => "success");
+    $result = array("message" => "fail");
+    $result = array("message" => "login first");
+----
+
+### dislikePage
+#### URL: dislikePage
+#### Post Value:
+    $pageUid = $_POST["pageUid"];
+#### Return Value:
+    $result = array("message" => "success");
+    $result = array("message" => "fail");
+    $result = array("message" => "login first");
+----
+
+### likeIssue
+#### URL: likeIssue
+#### Post Value:
+    $issueUid = $_POST["issueUid"];
+#### Return Value:
+    $result = array("message" => "success");
+    $result = array("message" => "fail");
+    $result = array("message" => "login first");
+----
+
+### dislikeIssue
+#### URL: dislikeIssue
+#### Post Value:
+    $issueUid = $_POST["issueUid"];
+#### Return Value:
+    $result = array("message" => "success");
+    $result = array("message" => "fail");
+    $result = array("message" => "login first");
+----
 
 

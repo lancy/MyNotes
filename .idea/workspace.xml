@@ -20,39 +20,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="getAllPages.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getAllPages.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="23" selection-start="447" selection-end="447" vertical-scroll-proportion="-13.75">
-              <folding>
-                <element signature="e#6#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getIssueArray.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getIssueArray.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="162" selection-end="565" vertical-scroll-proportion="-5.625">
-              <folding>
-                <element signature="e#6#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getTagArray.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getTagArray.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="162" selection-end="539" vertical-scroll-proportion="-5.625">
-              <folding>
-                <element signature="e#6#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="getPageArray.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/getPageArray.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,10 +31,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getPageTitle.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getPageTitle.php">
+      <file leaf-file-name="prefix.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/prefix.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="-13.125">
+            <state line="349" column="41" selection-start="12047" selection-end="12047" vertical-scroll-proportion="-14.333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="likePage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/likePage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="1" selection-start="561" selection-end="561" vertical-scroll-proportion="-15.0">
               <folding>
                 <element signature="e#6#160#0" expanded="true" />
               </folding>
@@ -75,10 +51,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prefix.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/API/prefix.php">
+      <file leaf-file-name="dislikePage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/dislikePage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="349" column="41" selection-start="12047" selection-end="12047" vertical-scroll-proportion="0.63821894">
+            <state line="31" column="2" selection-start="663" selection-end="663" vertical-scroll-proportion="-19.375">
+              <folding>
+                <element signature="e#6#160#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="likeIssue.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/likeIssue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="162" selection-end="663" vertical-scroll-proportion="-5.5">
+              <folding>
+                <element signature="e#6#160#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dislikeIssue.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/dislikeIssue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="575" selection-end="607" vertical-scroll-proportion="0.7554348">
+              <folding>
+                <element signature="e#6#160#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="removeGroupMember.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/removeGroupMember.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -87,7 +96,16 @@
       <file leaf-file-name="getPage.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/getPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="163" selection-end="525" vertical-scroll-proportion="-1.875">
+            <state line="26" column="2" selection-start="525" selection-end="525" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addTag.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/addTag.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="163" selection-end="747" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
@@ -102,28 +120,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getMyGroups.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getMyGroups.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="19" selection-start="437" selection-end="437" vertical-scroll-proportion="-11.875">
-              <folding>
-                <element signature="e#6#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getGroupMembers.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getGroupMembers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="2" selection-start="555" selection-end="555" vertical-scroll-proportion="-16.25">
-              <folding>
-                <element signature="e#6#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -134,10 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/API/addGroupMember.php" />
-        <option value="$PROJECT_DIR$/removeGroupMember.html" />
-        <option value="$PROJECT_DIR$/API/removeGroupMember.php" />
-        <option value="$PROJECT_DIR$/API/addFriend.php" />
         <option value="$PROJECT_DIR$/API/deleteFriend.php" />
         <option value="$PROJECT_DIR$/API/logout.php" />
         <option value="$PROJECT_DIR$/getMyGroups.html" />
@@ -150,6 +142,10 @@
         <option value="$PROJECT_DIR$/API/getPageArray.php" />
         <option value="$PROJECT_DIR$/API/getPageTitle.php" />
         <option value="$PROJECT_DIR$/API/prefix.php" />
+        <option value="$PROJECT_DIR$/API/liekPage.php" />
+        <option value="$PROJECT_DIR$/API/dislikePage.php" />
+        <option value="$PROJECT_DIR$/API/likeIssue.php" />
+        <option value="$PROJECT_DIR$/API/dislikeIssue.php" />
       </list>
     </option>
   </component>
@@ -324,13 +320,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="22" width="1322" height="746" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28996864" sideWeight="0.6704" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28996864" sideWeight="0.6704" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -400,50 +396,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/deleteIssue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getIssue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="66" selection-end="219" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getMyGroups.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="47" selection-start="113" selection-end="113" vertical-scroll-proportion="-4.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/getGroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="163" selection-end="540" vertical-scroll-proportion="-1.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/getGroupUid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="162" selection-end="534" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/getMyFriends.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="475" selection-end="475" vertical-scroll-proportion="-14.375">
-          <folding>
-            <element signature="e#6#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/getMyGroups.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="19" selection-start="437" selection-end="437" vertical-scroll-proportion="-11.875">
@@ -462,13 +414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/getIssue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/getIssueArray.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="162" selection-end="565" vertical-scroll-proportion="-5.625">
@@ -484,13 +429,6 @@
           <folding>
             <element signature="e#6#160#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/getPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="163" selection-end="525" vertical-scroll-proportion="-1.875">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -521,10 +459,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/removeGroupMember.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/prefix.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="41" selection-start="12047" selection-end="12047" vertical-scroll-proportion="0.63821894">
+        <state line="349" column="41" selection-start="12047" selection-end="12047" vertical-scroll-proportion="-14.333333">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/getIssue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/getPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="2" selection-start="525" selection-end="525" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/addTag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="163" selection-end="747" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/likePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="1" selection-start="561" selection-end="561" vertical-scroll-proportion="-15.0">
+          <folding>
+            <element signature="e#6#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/dislikePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="2" selection-start="663" selection-end="663" vertical-scroll-proportion="-19.375">
+          <folding>
+            <element signature="e#6#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/likeIssue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="162" selection-end="663" vertical-scroll-proportion="-5.5">
+          <folding>
+            <element signature="e#6#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/dislikeIssue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="575" selection-end="607" vertical-scroll-proportion="0.7554348">
+          <folding>
+            <element signature="e#6#160#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
