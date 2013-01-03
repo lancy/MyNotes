@@ -32,6 +32,20 @@ function fetchArrayWithQueryString($queryString) {
     }
 }
 
+function fetchAllWithQueryString($queryString) {
+    $result = mysql_query($queryString);
+    if ($result) {
+        $fetchArray = array();
+        while ($object = mysql_fetch_array($result)) {
+            array_push($fetchArray, $object[0]);
+        }
+        return $fetchArray;
+    } else {
+        die('Error: ' . mysql_error());
+    }
+
+}
+
 function queryWithQueryString($queryString) {
     if (mysql_query($queryString)) {
         return true;
@@ -205,6 +219,7 @@ function deleteTagWithTagUid($tagUid) {
     return queryWithQueryString($queryString);
 }
 
+
 function addFriendWithUserUidAndFriendUid($userUid, $friendUid) {
     connectToDefaultDatabase();
     $queryString = "INSERT INTO `Friend_Relation` (`user_uid`, `friend_uid`)
@@ -241,7 +256,7 @@ function getGroupsUidArrayWithUserUid($userUid) {
     $queryString = "SELECT `group_uid`
                     FROM `User_Group_Relation`
                     WHERE `user_uid` = '$userUid' ";
-    return fetchArrayWithQueryString($queryString);
+    return fetchAllWithQueryString($queryString);
 }
 
 function getUsersUidArrayWIthGroupUid($groupUid) {
@@ -249,7 +264,7 @@ function getUsersUidArrayWIthGroupUid($groupUid) {
     $queryString = "SELECT `user_uid`
                     FROM `User_Group_Relation`
                     WHERE `group_uid` = '$groupUid' ";
-    return fetchArrayWithQueryString($queryString);
+    return fetchAllWithQueryString($queryString);
 }
 
 function getFriendsUidArrayWithUserUid($userUid) {
@@ -257,7 +272,7 @@ function getFriendsUidArrayWithUserUid($userUid) {
     $queryString = "SELECT `user_uid`
                     FROM `Friend_Relation`
                     WHERE `friend_uid` = '$userUid'";
-    return fetchArrayWithQueryString($queryString);
+    return fetchAllWithQueryString($queryString);
 }
 
 function getAllPagesUidArray() {
@@ -265,7 +280,7 @@ function getAllPagesUidArray() {
     $queryString = "SELECT `page_uid`
                     FROM `Page`
                     ORDER BY `create_timestamp` DESC";
-    return fetchArrayWithQueryString($queryString);
+    return fetchAllWithQueryString($queryString);
 }
 
 function getIssueUidArrayWithUserUidAndPageUid($userUid, $pageUid) {
@@ -274,13 +289,13 @@ function getIssueUidArrayWithUserUidAndPageUid($userUid, $pageUid) {
                      FROM `Issue`
                      WHERE `Issue`.`page_uid` = '$pageUid'
                      AND `Issue`.`issue_type` = 'comment'";
-    $commentsArray = fetchArrayWithQueryString($queryComment);
+    $commentsArray = fetchAllWithQueryString($queryComment);
     $queryFriendsIssue = "SELECT DISTINCT `issue_uid`
                      FROM `Issue`, `Friend_Relation`
                      WHERE `Issue`.`page_uid` = '$pageUid'
                      AND `Friend_Relation`.`user_uid` = '$userUid'
                      AND `Issue`.`author_uid` = `Friend_Relation`.`friend_uid`";
-    $friendsIssueArray = fetchArrayWithQueryString($queryFriendsIssue);
+    $friendsIssueArray = fetchAllWithQueryString($queryFriendsIssue);
     $queryGroupIssue = "SELECT DISTINCT `issue_uid`
                         FROM `Issue`, `User_Group_Relation` AS `UserA_Group`, `User_Group_Relation` AS `UserB_Group`
                         WHERE `Issue`.`page_uid` = '$pageUid'
@@ -288,7 +303,7 @@ function getIssueUidArrayWithUserUidAndPageUid($userUid, $pageUid) {
                         AND `UserA_Group`.`user_uid` = '$userUid'
                         AND `UserB_Group`.`user_uid` = `Issue`.`author_uid`
                         AND `UserA_Group`.`group_uid` = `UserB_Group`.`group_uid`";
-    $groupIssueArray = fetchArrayWithQueryString($queryGroupIssue);
+    $groupIssueArray = fetchAllWithQueryString($queryGroupIssue);
 
     $result = array();
     if ($commentsArray) {
@@ -309,7 +324,7 @@ function getTagUidArrayWithPageUid($pageUid) {
     $queryString = "SELECT `tag_uid`
                     FROM `Tag`
                     WHERE `page_uid` = '$pageUid'";
-    return fetchArrayWithQueryString($queryString);
+    return fetchAllWithQueryString($queryString);
 }
 
 function getPageUidArrayWithTagUid($tagUid) {
@@ -317,7 +332,7 @@ function getPageUidArrayWithTagUid($tagUid) {
     $queryString = "SELECT `page_uid`
                     FROM `Tag`
                     WHERE `tag_uid` = '$tagUid'";
-    return fetchArrayWithQueryString($queryString);
+    return fetchAllWithQueryString($queryString);
 }
 
 function likePageWithPageUid($pageUid) {
@@ -325,7 +340,7 @@ function likePageWithPageUid($pageUid) {
     $queryString = "UPDATE `Page`
                     SET `like` = `like` + 1
                     WHERE `page_uid` = '$pageUid'";
-    return fetchArrayWithQueryString($queryString);
+    return queryWithQueryString($queryString);
 }
 
 function dislikePageWithPageUid($pageUid) {
@@ -333,7 +348,7 @@ function dislikePageWithPageUid($pageUid) {
     $queryString = "UPDATE `Page`
                     SET `like` = `like` - 1
                     WHERE `page_uid` = '$pageUid'";
-    return fetchArrayWithQueryString($queryString);
+    return queryWithQueryString($queryString);
 }
 
 function likeIssueWithIssueUid($issueUid) {
@@ -341,7 +356,7 @@ function likeIssueWithIssueUid($issueUid) {
     $queryString = "UPDATE `Issue`
                     SET `like` = `like` + 1
                     WHERE `issue_uid` = '$issueUid'";
-    return fetchArrayWithQueryString($queryString);
+    return queryWithQueryString($queryString);
 }
 
 function dislikeIssueWithIssueUid($issueUid) {
@@ -349,7 +364,7 @@ function dislikeIssueWithIssueUid($issueUid) {
     $queryString = "UPDATE `Issue`
                     SET `like` = `like` - 1
                     WHERE `issue_uid` = '$issueUid'";
-    return fetchArrayWithQueryString($queryString);
+    return queryWithQueryString($queryString);
 }
 
 
