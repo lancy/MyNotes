@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<form method="POST" action="API/addIssue.php">
+    Add Issue<br>
+    Page Uid:<input type="text" name="pageUid"><br>
+    Issue Type:
+    <input type="radio" name="issueType" value="note" checked="checked"> note
+    <input type="radio" name="issueType" value="comment"> comment <br>
+    Issue Content:
+    <textarea name="issueContent"></textarea>
+    Is group public:
+    <input type="checkbox" name="isGroupPublic" checked="checked">
+    <input type="submit">
+</form>
+
+
+</body>
+</html>
