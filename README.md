@@ -255,16 +255,25 @@ Dictionary: message
 ----
 
 ## Friend Manage
-###   1. addFriendWithUserUidAndFriendUid
+###   1. add friend with friend uid
 #### URL: addFriend
 #### Post Value:
+    $friendUid = $_POST["friendUid"];
 #### Return Value:
+    $result = array("message" => "success");
+    $result = array("message" => "fail");
+    $result = array("message" => "login first");
+
 ----
 
-###   2. deleteFriendWIthUserUidAndFriendUid
-#### URL
+###   2. delete friend with friend uid
+#### URL: deleteFriend
 #### Post Value:
+    $friendUid = $_POST["friendUid"];
 #### Return Value:
+    $result = array("message" => "success");
+    $result = array("message" => "fail");
+    $result = array("message" => "login first");
 ----
 
 
@@ -272,68 +281,92 @@ Dictionary: message
 
 ## User:
 ###   1. registerWithUsernameAndPassword
-#### URL
+#### URL: register
 #### Post Value:
+    Username:<input type="text" name="username"><br>
+    Password:<input type="password" name="password"><br>
+
 #### Return Value:
+        $result = array("message" => "success");
+        $result = array("message" => "fail");
+
 ----
 
 ###   2. loginWithUsernameAndPassword
-#### URL
+#### URL: login
 #### Post Value:
+    Username:<input type="text" name="username"><br>
+    Password:<input type="password" name="password"><br>
+
 #### Return Value:
+        $result = array("message" => "success");
+        $result = array("message" => "fail");
+
 ----
 
-###   3. getRecentIssueUidArrayWithUserUid
-#### URL
+###   3. getRecentIssueUidArrayWithUserUid (deprecated)
+#### URL: 
 #### Post Value:
 #### Return Value:
+
 ----
 
 ###   4. logout
-#### URL
+#### URL: logout
 #### Post Value:
 #### Return Value:
+    $result = array("message" => "success");
+
 ----
 
 ## Group
 ###   1. groupsUidArrayWithUserUid
-#### URL
+#### URL: getMyGroups
 #### Post Value:
 #### Return Value:
+一个group uid array
 ----
 
-###   2. usersUidArrayWIthGroupUid
-#### URL
+###   2. usersUidArrayWithGroupUid
+#### URL: getGourpMembers
 #### Post Value:
+    $groupUid = $_POST["groupUid"];
+
 #### Return Value:
+一个user uid array
 ----
 
 ## Friend:
 ###   1. getFriendsUidArray
-#### URL
-#### Post Value:
+#### URL: getMyFriends
+#### Post Value:    
 #### Return Value:
+一个user uid array
 ----
 
 ## Page:
-###   1. getPublicPageUidArray
-#### URL
+###   1. get all Page Uid Array
+#### URL: getAllPages
 #### Post Value:
 #### Return Value:
+一个page uid array
 ----
 
 ## Issue:
 ###   1. getIssueUidArrayWithPageUid (封装了逻辑，只会得到当前登录用户能看到的，公开的，好友的，组公开的）
-#### URL
+#### URL: getIssueArray    
 #### Post Value:
 #### Return Value:
+一个issue array
 ----
 
 ## Tag:
 ###   1. getTagUidArrayWithPageUid
-#### URL
+#### URL: getTagArray
 #### Post Value:
+    $pageUid = $_POST["pageUid"];
 #### Return Value:
+一个tag uid array
 ----
 
 ###   2. getPageUidArrayWithTagUid
