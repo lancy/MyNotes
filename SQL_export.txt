@@ -1,0 +1,202 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jan 03, 2013 at 08:50 AM
+-- Server version: 5.5.25
+-- PHP Version: 5.4.4
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `mynotes`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Friend_Relation`
+--
+
+CREATE TABLE `Friend_Relation` (
+  `user_uid` int(11) NOT NULL,
+  `friend_uid` int(11) NOT NULL,
+  KEY `user_uid` (`user_uid`,`friend_uid`),
+  KEY `friend_uid` (`friend_uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Group`
+--
+
+CREATE TABLE `Group` (
+  `group_uid` int(11) NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(255) NOT NULL,
+  `admin_uid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`group_uid`),
+  KEY `admin_uid` (`admin_uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `Group`
+--
+
+INSERT INTO `Group` (`group_uid`, `group_name`, `admin_uid`) VALUES
+(2, 'AppleClub', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Issue`
+--
+
+CREATE TABLE `Issue` (
+  `issue_uid` int(11) NOT NULL AUTO_INCREMENT,
+  `author_uid` int(11) DEFAULT NULL,
+  `issue_type` enum('note','comment') NOT NULL,
+  `issue_content` varchar(255) NOT NULL,
+  `page_uid` int(11) NOT NULL,
+  `is_group_public` tinyint(4) NOT NULL,
+  `like` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`issue_uid`),
+  KEY `author_uid` (`author_uid`),
+  KEY `page_uid` (`page_uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `Issue`
+--
+
+INSERT INTO `Issue` (`issue_uid`, `author_uid`, `issue_type`, `issue_content`, `page_uid`, `is_group_public`, `like`) VALUES
+(1, 1, 'note', 'ok', 1, 0, 0),
+(2, 1, 'note', 'nice', 1, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Page`
+--
+
+CREATE TABLE `Page` (
+  `page_uid` int(11) NOT NULL AUTO_INCREMENT,
+  `page_content` blob NOT NULL,
+  `author_uid` int(11) DEFAULT NULL,
+  `page_type` enum('book','webpage','paper') NOT NULL,
+  `page_title` varchar(255) NOT NULL,
+  `like` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`page_uid`),
+  KEY `author_uid` (`author_uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `Page`
+--
+
+INSERT INTO `Page` (`page_uid`, `page_content`, `author_uid`, `page_type`, `page_title`, `like`) VALUES
+(1, 0x676f6f6420646179, 2, 'book', 'Hello World', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Tag`
+--
+
+CREATE TABLE `Tag` (
+  `tag_uid` int(11) NOT NULL AUTO_INCREMENT,
+  `page_uid` int(11) NOT NULL,
+  `tag_content` varchar(255) NOT NULL,
+  PRIMARY KEY (`tag_uid`),
+  KEY `page_uid` (`page_uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User`
+--
+
+CREATE TABLE `User` (
+  `user_uid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(16) NOT NULL,
+  `password` varchar(16) NOT NULL,
+  `is_admin` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_uid`),
+  UNIQUE KEY `user_uid` (`user_uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`user_uid`, `username`, `password`, `is_admin`) VALUES
+(1, 'root', 'root', 1),
+(2, 'lancy', '123', 0),
+(4, '', '', 0),
+(5, '', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User_Group_Relation`
+--
+
+CREATE TABLE `User_Group_Relation` (
+  `user_uid` int(11) NOT NULL,
+  `group_uid` int(11) NOT NULL,
+  KEY `user_uid` (`user_uid`,`group_uid`),
+  KEY `group_uid` (`group_uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `User_Group_Relation`
+--
+
+INSERT INTO `User_Group_Relation` (`user_uid`, `group_uid`) VALUES
+(2, 2);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Friend_Relation`
+--
+ALTER TABLE `Friend_Relation`
+  ADD CONSTRAINT `Friend_Relation_ibfk_1` FOREIGN KEY (`user_uid`) REFERENCES `User` (`user_uid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `Friend_Relation_ibfk_2` FOREIGN KEY (`friend_uid`) REFERENCES `User` (`user_uid`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Group`
+--
+ALTER TABLE `Group`
+  ADD CONSTRAINT `Group_ibfk_2` FOREIGN KEY (`admin_uid`) REFERENCES `User` (`user_uid`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Issue`
+--
+ALTER TABLE `Issue`
+  ADD CONSTRAINT `Issue_ibfk_1` FOREIGN KEY (`author_uid`) REFERENCES `User` (`user_uid`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `Issue_ibfk_2` FOREIGN KEY (`page_uid`) REFERENCES `Page` (`page_uid`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Page`
+--
+ALTER TABLE `Page`
+  ADD CONSTRAINT `Page_ibfk_1` FOREIGN KEY (`author_uid`) REFERENCES `User` (`user_uid`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Tag`
+--
+ALTER TABLE `Tag`
+  ADD CONSTRAINT `Tag_ibfk_1` FOREIGN KEY (`page_uid`) REFERENCES `Page` (`page_uid`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `User_Group_Relation`
+--
+ALTER TABLE `User_Group_Relation`
+  ADD CONSTRAINT `User_Group_Relation_ibfk_1` FOREIGN KEY (`user_uid`) REFERENCES `User` (`user_uid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `User_Group_Relation_ibfk_2` FOREIGN KEY (`group_uid`) REFERENCES `Group` (`group_uid`) ON DELETE CASCADE ON UPDATE CASCADE;

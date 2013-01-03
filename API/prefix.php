@@ -320,5 +320,38 @@ function getPageUidArrayWithTagUid($tagUid) {
     return fetchArrayWithQueryString($queryString);
 }
 
+function likePageWithPageUid($pageUid) {
+    connectToDefaultDatabase();
+    $queryString = "UPDATE `Page`
+                    SET `like` = `like` + 1
+                    WHERE `page_uid` = '$pageUid'";
+    return fetchArrayWithQueryString($queryString);
+}
+
+function dislikePageWithPageUid($pageUid) {
+    connectToDefaultDatabase();
+    $queryString = "UPDATE `Page`
+                    SET `like` = `like` - 1
+                    WHERE `page_uid` = '$pageUid'";
+    return fetchArrayWithQueryString($queryString);
+}
+
+function likeIssueWithIssueUid($issueUid) {
+    connectToDefaultDatabase();
+    $queryString = "UPDATE `Issue`
+                    SET `like` = `like` + 1
+                    WHERE `issue_uid` = '$issueUid'";
+    return fetchArrayWithQueryString($queryString);
+}
+
+function dislikeIssueWithIssueUid($issueUid) {
+    connectToDefaultDatabase();
+    $queryString = "UPDATE `Issue`
+                    SET `like` = `like` - 1
+                    WHERE `issue_uid` = '$issueUid'";
+    return fetchArrayWithQueryString($queryString);
+}
+
+
 
 ?>

@@ -385,9 +385,11 @@ Dictionary: message
 ----
 
 ###   2. getPageUidArrayWithTagUid
-#### URL
+#### URL: getPageArray
 #### Post Value:
+     $tagUid = $_POST["tagUid"];
 #### Return Value:
+一个page uid array
 ----
 
 
