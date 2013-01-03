@@ -143,6 +143,14 @@ function getPageWithPageUid($pageUid) {
     return fetchArrayWithQueryString($queryString);
 }
 
+function getPageWithPageTitle($pageTitle) {
+    connectToDefaultDatabase();
+    $queryString = "SELECT *
+                    FROM Page
+                    WHERE `page_title` = '$pageTitle'";
+    return fetchArrayWithQueryString($queryString);
+}
+
 function deletePageWithPageUid($pageUid) {
     connectToDefaultDatabase();
     $queryString = "DELETE FROM  Page

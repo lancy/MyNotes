@@ -166,6 +166,21 @@ Dictionary: message
     $result = array("message" => "success");
     $result = array("message" => "fail");
     $result = array("message" => "not page author");
+    
+###   4. Get page with page title
+#### URL: getPageTitle
+#### Post Value:
+    <input type="text" name="pageTitle">
+#### Return Value:
+    {
+        "page_uid":"1",
+        "page_content":"good day",
+        "author_uid":"2",
+        "page_type":"book",
+        "page_title":"Hello World"
+    }
+----
+    
 
 
 ## Issue Manage
