@@ -23,7 +23,36 @@
       <file leaf-file-name="prefix.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/prefix.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="28" selection-start="355" selection-end="355" vertical-scroll-proportion="0.19480519">
+            <state line="172" column="42" selection-start="5245" selection-end="5245" vertical-scroll-proportion="0.6994434">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addGroupMember.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/addGroupMember.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="164" selection-end="872" vertical-scroll-proportion="-1.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="joinGroup.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/joinGroup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="19" selection-start="617" selection-end="617" vertical-scroll-proportion="-16.125">
+              <folding>
+                <element signature="e#6#160#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getPageTitle.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/getPageTitle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="38" selection-start="312" selection-end="332" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -43,16 +72,7 @@
       <file leaf-file-name="getPage.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/getPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getIssue.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getIssue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="18" column="5" selection-start="412" selection-end="412" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
@@ -94,24 +114,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getMyFriends.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/getMyFriends.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getMyFriends.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getMyFriends.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -122,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/getMyGroups.html" />
         <option value="$PROJECT_DIR$/API/getMyGroups.php" />
         <option value="$PROJECT_DIR$/API/getGroupMembers.php" />
         <option value="$PROJECT_DIR$/API/getAllPages.php" />
@@ -138,6 +139,7 @@
         <option value="$PROJECT_DIR$/API/getMyFriends.php" />
         <option value="$PROJECT_DIR$/API/getUserPage.php" />
         <option value="$PROJECT_DIR$/API/prefix.php" />
+        <option value="$PROJECT_DIR$/API/joinGroup.php" />
       </list>
     </option>
   </component>
@@ -389,27 +391,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/API/likeIssue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="162" selection-end="663" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/dislikeIssue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="575" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getUserUid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addFriend.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -473,13 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/getPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/getPageArray.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="162" selection-end="536" vertical-scroll-proportion="-1.875">
@@ -496,9 +470,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/addGroupMember.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="164" selection-end="872" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/joinGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="19" selection-start="617" selection-end="617" vertical-scroll-proportion="-16.125">
+          <folding>
+            <element signature="e#6#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/getPageTitle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="38" selection-start="312" selection-end="332" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/getPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="412" selection-end="412" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/prefix.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="355" selection-end="355" vertical-scroll-proportion="0.19480519">
+        <state line="172" column="42" selection-start="5245" selection-end="5245" vertical-scroll-proportion="0.6994434">
           <folding />
         </state>
       </provider>

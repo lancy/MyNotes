@@ -452,4 +452,15 @@ Dictionary: message
 
 ----
 
+### join group with group uid
+#### URL: joinGroup
+#### Post Value:
+    $groupUid = $_POST["groupUid"];
+#### Return value
+    $result = array("message" => "success");
+    $result = array("message" => "fail");
+    $result = array("message" => "login first");
+
+
+
 
