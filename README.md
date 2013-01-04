@@ -443,7 +443,7 @@ Dictionary: message
 
 ## New API
 
-### get page uid array with user uid
+### 1. get page uid array with user uid
 #### URL: getUserPage
 #### Post Value:
     $userUid = $_POST["userUid"];
@@ -452,7 +452,7 @@ Dictionary: message
 
 ----
 
-### join group with group uid
+### 2. join group with group uid
 #### URL: joinGroup
 #### Post Value:
     $groupUid = $_POST["groupUid"];
@@ -461,14 +461,17 @@ Dictionary: message
     $result = array("message" => "fail");
     $result = array("message" => "login first");
 
+----
 
-### get top note
+### 3. get top note
 #### URL: getTopNote
 #### Post Value:
 #### Return Value:
     issue data model….(you know what)
+    
+----
 
-### get top comment
+### 4. get top comment
 #### URL: getTopComment
 #### Post Value:
 #### Return Value:
