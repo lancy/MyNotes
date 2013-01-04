@@ -468,3 +468,9 @@ Dictionary: message
 #### Return Value:
     issue data model….(you know what)
 
+### get top comment
+#### URL: getTopComment
+#### Post Value:
+#### Return Value:
+    issue data model….(you know what)
+

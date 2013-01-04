@@ -412,6 +412,16 @@ function getTopNote() {
     return fetchArrayWithQueryString($queryString);
 }
 
+function getTopComment() {
+    connectToDefaultDatabase();
+    $queryString = "SELECT *
+                    FROM `Issue`
+                    WHERE `issue_type` = 'comment'
+                    ORDER BY `like` DESC
+                    LIMIT 1";
+
+    return fetchArrayWithQueryString($queryString);
+}
 
 
 ?>
