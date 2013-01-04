@@ -7,6 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
+error_reporting(E_ALL ^ E_NOTICE);
 function connectToDefaultDatabase() {
     $serverName = ":/Applications/MAMP/tmp/mysql/mysql.sock";
     $mysqlUsername = "root";
