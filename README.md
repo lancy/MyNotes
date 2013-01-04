@@ -117,8 +117,8 @@ Dictionary: message
 ###   6. Remove Group Member With Group uid and User uid
 #### URL: removeGroupMember
 #### Post Value:
-    <input type="type" name="groupName">
-    <input type="type" name="toRemoveUsername">
+    $groupUid = $_POST["groupUid"];
+    $toRemoveUserUid = $_POST["toRemoveUserUid"];
 #### Return Value:
     $result = array("message" => "success");
     $result = array("message" => "fail");
@@ -439,6 +439,17 @@ Dictionary: message
     $result = array("message" => "success");
     $result = array("message" => "fail");
     $result = array("message" => "login first");
+----
+
+## New API
+
+### get page uid array with user uid
+#### URL: getUserPage
+#### Post Value:
+    $userUid = $_POST["userUid"];
+#### Return value:
+一个page uid array
+
 ----
 
 

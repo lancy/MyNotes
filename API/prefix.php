@@ -367,6 +367,14 @@ function dislikeIssueWithIssueUid($issueUid) {
     return queryWithQueryString($queryString);
 }
 
+function getPageUidArrayWithUserUid($userUid) {
+    connectToDefaultDatabase();
+    $queryString = "SELECT `page_uid`
+                    FROM `Page`
+                    WHERE `author_uid` = '$userUid'";
+    return fetchAllWithQueryString($queryString);
+}
+
 
 
 ?>
