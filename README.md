@@ -376,7 +376,7 @@ Dictionary: message
 #### URL: getIssueArray    
 #### Post Value:
 #### Return Value:
-一个issue array
+一个issue uid array
 
 ----
 
@@ -462,5 +462,9 @@ Dictionary: message
     $result = array("message" => "login first");
 
 
-
+### get top note
+#### URL: getTopNote
+#### Post Value:
+#### Return Value:
+    issue data model….(you know what)
 

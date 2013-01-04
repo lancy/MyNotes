@@ -33,6 +33,8 @@ function fetchArrayWithQueryString($queryString) {
     }
 }
 
+
+// only first object
 function fetchAllWithQueryString($queryString) {
     $result = mysql_query($queryString);
     if ($result) {
@@ -44,8 +46,23 @@ function fetchAllWithQueryString($queryString) {
     } else {
         die('Error: ' . mysql_error());
     }
-
 }
+
+// all object array
+function fetchAllArrayWithQueryString($queryString) {
+    $result = mysql_query($queryString);
+    if ($result) {
+        $fetchArray = array();
+        while ($object = mysql_fetch_array($result)) {
+            array_push($fetchArray, $object);
+        }
+        return $fetchArray;
+    } else {
+        die('Error: ' . mysql_error());
+    }
+}
+
+
 
 function queryWithQueryString($queryString) {
     if (mysql_query($queryString)) {
@@ -374,6 +391,25 @@ function getPageUidArrayWithUserUid($userUid) {
                     FROM `Page`
                     WHERE `author_uid` = '$userUid'";
     return fetchAllWithQueryString($queryString);
+}
+
+function getPageArrayWithGroupUid($groupUid) {
+    connectToDefaultDatabase();
+    $queryString = "SELECT *
+                    FROM `Page`
+                    WHERE `author_uid` = '$userUid'";
+    return fetchAllArrayWithQueryString($queryString);
+}
+
+function getTopNote() {
+    connectToDefaultDatabase();
+    $queryString = "SELECT *
+                    FROM `Issue`
+                    WHERE `issue_type` = 'note'
+                    ORDER BY `like` DESC
+                    LIMIT 1";
+
+    return fetchArrayWithQueryString($queryString);
 }
 
 
