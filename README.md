@@ -476,4 +476,11 @@ Dictionary: message
 #### Post Value:
 #### Return Value:
     issue data model….(you know what)
+    
+### 5. get page uid array with group guid
+#### URL: getGroupPages
+#### Post Value:
+        $groupUid = $_POST["groupUid"];
+#### Return Value:
+一个page uid array
 

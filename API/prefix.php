@@ -393,14 +393,6 @@ function getPageUidArrayWithUserUid($userUid) {
     return fetchAllWithQueryString($queryString);
 }
 
-function getPageArrayWithGroupUid($groupUid) {
-    connectToDefaultDatabase();
-    $queryString = "SELECT *
-                    FROM `Page`
-                    WHERE `author_uid` = '$userUid'";
-    return fetchAllArrayWithQueryString($queryString);
-}
-
 function getTopNote() {
     connectToDefaultDatabase();
     $queryString = "SELECT *
@@ -421,6 +413,20 @@ function getTopComment() {
                     LIMIT 1";
 
     return fetchArrayWithQueryString($queryString);
+}
+
+function getTopUser() {
+    connectToDefaultDatabase();
+
+}
+
+function getPageUidArrayWithGroupUid($groupUid) {
+    connectToDefaultDatabase();
+    $queryString = "SELECT `page_uid`
+                    FROM `Page`, `User_Group_Relation`
+                    WHERE (`Page`.`author_uid` = `User_Group_Relation`.`user_uid`)
+                          AND (`User_Group_Relation`.`group_uid` = '$groupUid')";
+    return fetchAllWithQueryString($queryString);
 }
 
 
